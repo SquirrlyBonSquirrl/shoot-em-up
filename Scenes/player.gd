@@ -37,3 +37,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		progress_bar.value = health
 			#later switch to game over screen
 			#
+#this line is comepletly useless trying to make github work
