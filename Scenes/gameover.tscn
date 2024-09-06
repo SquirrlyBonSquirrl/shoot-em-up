@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfdv4jx05qai4"]
+
+[ext_resource type="Texture2D" uid="uid://bjg0habb8qa6h" path="res://Assets/Misc/title.png" id="1_ggyqb"]
+
+[node name="gameover" type="Node2D"]
+position = Vector2(694, 47)
+
+[node name="gameover" type="TextureRect" parent="."]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 744.0
+offset_bottom = 234.0
+texture = ExtResource("1_ggyqb")
+metadata/_edit_use_anchors_ = true

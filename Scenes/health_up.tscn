@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2eqa3ld8k1kx"]
+
+[ext_resource type="Script" path="res://health_up.gd" id="1_gcytv"]
+[ext_resource type="Texture2D" uid="uid://d10171mrchlr2" path="res://Assets/Powerrups.png" id="2_nhomt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujsxh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1nq2"]
+atlas = ExtResource("2_nhomt")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kan7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1nq2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Health Up" type="Area2D" groups=["HealthUp"]]
+script = ExtResource("1_gcytv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ujsxh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_kan7p")
